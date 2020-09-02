@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script type="text/javascript">
+function handler(todo) {
+	var tr = [];
+	 tr.push('<tr id = \'task'+todo.id+'\'>');
+	tr.push('<td>' + todo.id + '</td>');
+	tr.push('<td>' + todo.task + '</td>');
+	tr.push('<td>' + todo.name + '</td>');
+	tr.push('<td><button class=\'edit\' id='+todo.id+'>Edit</button>&nbsp;&nbsp;<button class=\'delete\' id=' + todo.id + '>Delete</button></td>');
+	tr.push('</tr><br>');
+	//$('#list').append($(tr.join('')));
+	//$("#msg").html( "<span style='color: green'>Added task successfully</span>" );
+	return tr;
+} 
+var todo = {
+		id: 1,
+		task:"test the program",
+		name:"Alekha"
+}
+console.log(handler(todo))
+</script>
+</head>
+
+<body>
+
+</body>
+</html>
